@@ -7,6 +7,10 @@ import Login from './components/login.component';
 import SignUp from './components/signup.component';
 import UserDetails from './components/userDetails';
 import Navbar from './components/Navbar';
+import Home from './components/Home';
+import About from './components/About';
+import Jobs from './components/Jobs';
+import Contact from './components/Contact';
 function App() {
   return (
     <Router>
@@ -39,15 +43,18 @@ function App() {
               <Route exact path="/" element={<Login />} />
               <Route path="/sign-in" element={<Login />} />
               <Route path="/sign-up" element={<SignUp />} />
-              <Route path="/userDetails" element={<Navbar />} />
+              <Route path="/"element={<Home />}></Route>
+              <Route path="/About"element={<About />}></Route>
+              <Route path="/Jobs"element={<Jobs />}></Route>
+              <Route path="/Contact"element={<Contact />}></Route>
             </Routes>
           </div>
         </div> }
       </div>
     </Router>
-  //   <div className="App">
-  //    <Navbar />
-  //  </div>
+   <div className="App">
+     <Navbar />
+    </div>
   )
 }
 
